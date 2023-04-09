@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, render_template
 from flask_cors import CORS
 
 import qrcode
@@ -8,6 +8,10 @@ from io import BytesIO
 
 app = Flask(__name__)
 CORS(app)
+
+# @app.route('/')
+# def home():
+#     return render_template('index.html')
 
 @app.route('/generate_qrcode', methods=['POST'])
 def generate_qrcode():
