@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         function generateQRCode(value) {
             let formData = new FormData();
@@ -23,12 +26,28 @@
         }
     </script>
 </head>
+
 <body>
-    <h2>QR Code Generator Tutorial</h2>
-    <div>
-        <label>Text: </label>
-        <input name="qrcode" type="text" onchange="generateQRCode(this.value)" />
+    <div class="py-4">
+        <h1 class="text-3xl sm:text-3xl xl:text-9xl md:text-7xl font-bold text-center mt-20">QR CODE GENERATOR</h1>
     </div>
-    <img id="qrcode" />
+    <div class="text-black">
+        <div class="my-5">
+            <input class="object-center text-black mx-auto flex text-xl w-4/5 px-10 py-4 rounded-full"
+                placeholder="PUT ANY TEXT, LINK OR NUMBER HERE ! THEN PRESS ENTER." name="qrcode" type="text"
+                onchange="generateQRCode(this.value)" />
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div>
+            <p class="text-2xl sm:text-2xl xl:text-7xl md:text-5xl font-bold text-center mt-10">HERE IS YOUR QR</p>
+            <div class="my-10">
+                <img src="" alt="" id="qrcode" class="border-half mx-auto ">
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
